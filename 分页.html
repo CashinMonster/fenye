@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="fenye.css">
+</head>
+<body>
+	<table id="cs_table" class="datatable"></table>
+</body>
+<script src="jquery-2.2.1.min.js"></script>
+<script src="fenye.js"></script>
+<script type="text/javascript">
+    var data = [];
+    for(var i=0;i<7;i++){
+        data[i] = {id:i+1,name:"jason"+(i+1),gender:"男",age:26,address:"成都"};
+    }
+    var cs = new table({
+        "tableId":"cs_table",    //必须
+        "headers":["序号","姓名","性别","年龄","地址"],   //必须
+        "data":data,        //必须
+        "displayNum": 6,    //必须   默认 10
+       "groupDataNum":9  //可选    默认 10
+    });
+
+
+</script>
+</html>
